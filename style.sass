@@ -1,0 +1,168 @@
+$textColor: #224870
+$bgColor: #CDDDDD 
+$bgColor2: #FEDC97
+$contColor: #9BD1E5 
+$dataColor: #080705
+$font1: 'Ceviche One', cursive
+$font2: 'Slabo 27px', serif
+$mainTrans: all 0.8s ease
+
+body
+  color: $textColor
+  background-color: $bgColor
+  font-family: $font1
+  
+// Title Styling
+.title
+  display: flex
+  text-align: center
+.text-center
+  cursor: default
+  font-size: 340%
+  
+// Stars Animations & Styling
+@keyframes rotateC
+  from
+    transform: rotate(0deg)
+  to 
+    transform: rotate(360deg)
+@keyframes rotateCC
+  from
+    transform: rotate(360deg)
+  to 
+    transform: rotate(deg) 
+.star
+  margin-top: 5%
+  width: 12%
+  height: 12%
+  animation-duration: 1s
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+  transition: $mainTrans
+.star:hover
+  animation-duration: 0.6s
+#star1
+  animation-name: rotateCC
+#star2
+  animation-name: rotateC
+
+// Form Styling 
+.inputArea
+  display: flex
+.myInput
+  background-color: $bgColor
+  color: $textColor
+  border: none
+  border-bottom: 2px solid $textColor
+  box-shadow: none
+  border-radius: 0
+  font-size: 150%
+@keyframes transR
+  from
+    transform: translateX(0px)
+  to 
+    transform: translateX(6px)     
+.arrow
+  animation-name: transR
+  animation-duration: 0.8s
+  animation-iteration-count: infinite
+  animation-timing-function: ease
+  transition: $mainTrans
+  cursor: default
+  margin-top: 2%
+.form-control:focus
+  box-shadow: none
+  border-color: $contColor
+.clearBtn
+  cursor: pointer
+  transition: $mainTrans
+  font-size: 120%
+  margin-top: 2%
+.clearBtn:hover
+  color: $bgColor2
+ 
+// Input Buttons Styling
+.btnContent 
+  margin-top: 3%
+  display: flex
+.btn 
+  width: 50%
+  margin: 1%
+  color: $bgColor
+  background-color: $textColor
+  transition: $mainTrans
+  font-size: 150%
+.btn:hover
+  color: $textColor
+  background-color: $bgColor2
+
+// Content Results Styling
+.content
+  background-color: $contColor
+  margin: 1%
+  margin-bottom: 10%
+  margin-top: 10%
+  padding: 5%
+  border-radius: 20px
+  color: $dataColor
+  transition: all 1s linear
+  font-size: 130%
+  font-family: $font2
+.content:hover
+  background-color: $bgColor2
+  cursor: pointer
+.dataLink
+  color: $dataColor !important
+  text-decoration: none !important
+.dataName
+  font-size: 150%
+  font-family: $font1
+.dataDesc
+  font-size: 90%
+
+// Info Styling
+.info
+  display: inline-block
+.infoBtns
+  cursor: pointer
+  transition: all 0.5s ease
+  padding: 0.5%
+.infoBtns:hover
+  transform: scale(1.5)
+.credit
+  color: $textColor
+  font-family: $font2
+  text-align: center
+  font-size: 80%
+.webLink, .apiLink 
+  transition: $mainTrans
+  color: green
+.webLink:hover, .apiLink:hover 
+  color: #119DA4
+  cursor: pointer
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1920px) and (-webkit-min-device-pixel-ratio: 1)
+  .text-center
+    font-size: 800%
+  .star
+    width: 18%
+    height: 18%
+  .inputArea
+    margin-top: 5%
+  .myInput
+    font-size: 250%
+  .arrow
+    margin-top: 0.5%
+    font-size: 150%
+  .clearBtn
+    margin-top: 0.5%
+    font-size: 150%
+  .btn
+    font-size: 300%
+  .content
+    margin-bottom: 2%
+    margin-top: 2%
+  .credit
+    font-size: 150%
+    
+  
